@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selamat Hari Guru - 25 November 2025</title>
+
+  <style>
+    :root {
+      --bg: #fff8f2;
+      --card: #ffffff;
+      --accent: #ff6b6b;
+      --accent-2: #ffb86b;
+      --text: #2b2b2b;
+      --muted: #6b6b6b;
+      --shadow: 0 8px 30px rgba(43, 43, 43, 0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui;
+      background: radial-gradient(1200px 600px at -10% 10%, #fff2f0 0%, transparent 10%),
+                  radial-gradient(900px 400px at 110% 90%, #fff9f1 0%, transparent 10%), var(--bg);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: var(--text);
+      overflow-x:hidden;
+    }
+
+    .fade {
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .container { max-width: 960px; width: 100%; position: relative; z-index: 10; }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 24px;
+    }
+    @media (max-width:880px) { .card { grid-template-columns: 1fr; } }
+
+    .hero h1 { margin: 0; font-size: 28px; }
+    .lead { color: var(--muted); margin: 10px 0 18px; line-height: 1.55; }
+
+    .date-pill {
+      display: inline-block;
+      padding: 6px 12px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: white;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .messages { margin-top: 12px; }
+    .message-box {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      transition: 0.4s;
+    }
+    .message-text { font-size: 16px; line-height: 1.5 }
+    .author { margin-top: 10px; font-weight: 700; color: var(--accent) }
+
+    .right { display: flex; flex-direction: column; gap: 16px }
+    .photo-frame {
+      width: 100%;
+      height: 180px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,107,107,0.12), rgba(255,184,107,0.06));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1.6s ease;
+    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover }
+
+    .small { font-size: 13px; color: var(--muted) }
+    footer { margin-top: 18px; text-align: center; color: var(--muted); font-size: 13px }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: white;
+      transition: 0.25s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      opacity: 0.9;
+    }
+
+    #snow {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:1;
+      pointer-events:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<canvas id="snow"></canvas>
+
+<audio id="bgm" autoplay loop muted>
+  <source src="https://f.top4top.io/m_36167k5fc0.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container fade">
+  <section class="card">
+
+    <div class="hero">
+      <div class="date-pill">25 November 2025 — Hari Guru Nasional</div>
+      <h1>Selamat Hari Guru, Pak Roky Budi Wahana</h1>
+
+      <!-- ⭐ Ucapan panjang sudah ditambahkan di sini ⭐ -->
+      <p class="lead">
+        Pada kesempatan Hari Guru Nasional ini, kami ingin menyampaikan rasa hormat dan terima kasih 
+        yang sedalam-dalamnya kepada Bapak Roky Budi Wahana. Terima kasih karena selama ini Bapak 
+        telah menjadi sosok yang tidak hanya mengajar, tetapi juga membimbing kami dengan penuh 
+        ketulusan, kesabaran, dan semangat yang tidak pernah padam. Setiap nasihat, perhatian, dan 
+        arahan yang Bapak berikan telah menjadi cahaya dan kekuatan dalam perjalanan kami sebagai 
+        pelajar. Bapak telah menanamkan nilai-nilai kedisiplinan, kejujuran, kerja keras, dan keyakinan 
+        bahwa setiap murid memiliki potensi untuk meraih masa depan yang lebih baik.
+      </p>
+
+      <p class="lead">
+        Hari ini, kami ingin Bapak tahu bahwa setiap usaha Bapak tidak pernah sia-sia. Kebaikan, 
+        keteladanan, serta dedikasi yang Bapak berikan akan selalu kami kenang dan menjadi bagian 
+        penting dari hidup kami. Semoga Bapak selalu diberikan kesehatan, kebahagiaan, dan umur panjang 
+        agar dapat terus menginspirasi banyak generasi. Terima kasih atas semua yang telah Bapak 
+        lakukan, setiap langkah yang Bapak arahkan, dan setiap ilmu yang Bapak tanamkan kepada kami.  
+        Selamat Hari Guru Nasional, Pak Roky. Kami bangga pernah menjadi murid Bapak.
+      </p>
+
+      <div class="messages">
+        <div class="message-box" id="messageBox">
+          <div class="message-text" id="messageText">Memuat pesan...</div>
+          <div class="author" id="messageAuthor"></div>
+        </div>
+
+        <div style="display:flex; gap:8px; margin-top:12px;">
+          <button id="prevBtn">⟵ Sebelumnya</button>
+          <button id="nextBtn">Berikutnya ⟶</button>
+          <button id="surpriseBtn">Acak Pesan</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="right">
+      <div class="photo-frame">
+        <img src="https://i.ibb.co.com/CKz72Kzb/Whats-App-Image-2025-11-25-at-17-26-31.jpg" alt="Guru mengajar">
+      </div>
+
+      <div style="background:white; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+        <div style="font-weight:700; font-size:15px">Untuk Pak Roky</div>
+        <div class="small" style="margin-top:8px">Semoga sehat selalu dan tetap menjadi inspirasi bagi banyak murid.</div>
+      </div>
+
+      <div style="text-align:center; font-size:13px; color:var(--muted);">Bagikan kebahagiaan @oky_joe</div>
+    </aside>
+
+  </section>
+
+  <footer>Dibuat oleh anak kelas 9H ♥ untuk Pak Roky Budi Wahana — 25 November 2025</footer>
+</div>
+
+<script>
+const messages = [
+  {text:'Terima kasih, Pak Roky. Karena bimbingan Bapak kami lebih berani bermimpi.', author:'Murid bapak'},
+  {text:'Bapak mengajarkan bukan hanya pelajaran, tapi juga kehidupan.', author:'Kelas 9H'},
+  {text:'Semoga Bapak selalu diberi kesehatan dan kebahagiaan.', author:'Anak Didik'}
+];
+
+let idx = 0;
+const mt = document.getElementById('messageText');
+const ma = document.getElementById('messageAuthor');
+const mb = document.getElementById('messageBox');
+
+function show(i){
+  mt.textContent = messages[i].text;
+  ma.textContent = '- ' + messages[i].author;
+  mb.style.opacity = 0;
+  setTimeout(()=> mb.style.opacity = 1, 150);
+}
+
+document.getElementById('nextBtn').onclick = ()=>{ idx = (idx+1)%messages.length; show(idx); }
+document.getElementById('prevBtn').onclick = ()=>{ idx = (idx-1+messages.length)%messages.length; show(idx); }
+document.getElementById('surpriseBtn').onclick = ()=>{ idx = Math.floor(Math.random()*messages.length); show(idx); }
+
+show(0);
+
+const bgm = document.getElementById("bgm");
+let volume = 0;
+bgm.volume = 0;
+
+function fadeInMusic() {
+  bgm.muted = false;
+  bgm.play();
+  const fade = setInterval(() => {
+    if (volume < 1) {
+      volume += 0.02;
+      bgm.volume = volume;
+    } else {
+      clearInterval(fade);
+    }
+  }, 150);
+}
+
+["click","touchstart"].forEach(ev=>{
+  window.addEventListener(ev, ()=>fadeInMusic(), { once:true });
+});
+
+const canvas = document.getElementById("snow");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+}
+resize();
+onresize = resize;
+
+let flakes=[];
+for(let i=0;i<100;i++){
+  flakes.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*3+2,
+    d: Math.random()+1
+  });
+}
+
+function drawFlakes(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle="rgba(255,215,0,0.9)";
+  ctx.beginPath();
+
+  for(let f of flakes){
+    ctx.moveTo(f.x,f.y);
+    ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+  }
+
+  ctx.fill();
+  moveFlakes();
+}
+
+function moveFlakes(){
+  for(let f of flakes){
+    f.y += Math.pow(f.d,2)+1;
+    f.x += Math.sin(f.d);
+
+    if(f.y > canvas.height){
+      f.y = -10;
+      f.x = Math.random()*canvas.width;
+    }
+  }
+}
+
+setInterval(drawFlakes, 25);
+</script>
+
+</body>
+</html>
